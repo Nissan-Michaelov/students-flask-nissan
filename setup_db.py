@@ -36,8 +36,8 @@ def create_tables():
     execute_query("""
         CREATE TABLE IF NOT EXISTS students_courses (
             students_courses_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            student_id INTEGER UNIQUE,
-            course_id INTEGER UNIQUE,
+            student_id INTEGER,
+            course_id INTEGER,
             FOREIGN KEY(student_id) REFERENCES students (student_id),
             FOREIGN KEY(course_id) REFERENCES courses (course_id)
         )
